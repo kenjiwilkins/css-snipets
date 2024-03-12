@@ -8,6 +8,10 @@ function ButtonPage() {
       </section>
       <div className="button-container">
         <section>
+          <h2>blinking</h2>
+          <button className="blinking">Blinking</button>
+        </section>
+        <section>
           <h2>Filling</h2>
           <button className="filling">
             <span className="filling-span">Filling</span>

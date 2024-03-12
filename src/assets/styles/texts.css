@@ -1,0 +1,262 @@
+p {
+  font-size: 1em;
+  color: #4a4a4a;
+  margin: 0;
+  text-align: left;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-demo-container {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  height: 100%;
+}
+
+.placeholder {
+  height: 20vh;
+  min-width: 50vw;
+  background-color: #f0f0f0;
+  margin: 10px;
+}
+
+.sliding {
+  animation-name: slide;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  25% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+}
+
+.emerging {
+  animation-name: emerge;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes emerge {
+  0% {
+    color: transparent;
+  }
+  40% {
+    color: #4a4a4a;
+  }
+}
+
+.flip-appearing {
+  animation-name: flip-appear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes flip-appear {
+  0% {
+    transform: rotateY(180deg);
+    scale: 0;
+    opacity: 0;
+  }
+  50% {
+    scale: 0.75;
+    opacity: 1;
+  }
+  75% {
+    transform: rotateY(0deg);
+    scale: 1.01;
+  }
+}
+
+.shaking {
+  animation-name: shake;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0px);
+  }
+  5% {
+    transform: translateX(-15px);
+  }
+  10% {
+    transform: translateX(15px);
+  }
+  15% {
+    transform: translateX(-10px);
+  }
+  20% {
+    transform: translateX(10px);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  30% {
+    transform: translateX(5px);
+  }
+  35% {
+    transform: translateX(-2px);
+  }
+  40% {
+    transform: translateX(2px);
+  }
+  45% {
+    transform: translateX(0px);
+  }
+}
+
+.shadowing {
+  animation-name: shadow;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes shadow {
+  0% {
+    text-shadow: 0 0 0 #4a4a4a;
+  }
+  50% {
+    text-shadow: 1px 1px 0 #4a4a4a;
+  }
+  100% {
+    text-shadow: 0 0 0 #4a4a4a;
+  }
+}
+
+.random-color-to-black span:nth-child(1n) {
+  animation-name: color-to-black;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  color: red;
+}
+
+.random-color-to-black span:nth-child(2n) {
+  animation-name: color-to-black;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.5s;
+  color: green;
+}
+.random-color-to-black span:nth-child(3n) {
+  animation-name: color-to-black;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  color: blue;
+}
+.random-color-to-black span:nth-child(4n) {
+  animation-name: color-to-black;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1.5s;
+  color: yellow;
+}
+
+@keyframes color-to-black {
+  0% {
+    color: #4a4a4a;
+  }
+  50% {
+    color: #000000;
+  }
+}
+
+.slide-in {
+  animation-name: slideIn;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: rotate(-20deg) translateY(-200%);
+  }
+  25% {
+    transform: rotate(0deg) translateY(5px);
+  }
+  30% {
+    transform: rotate(0deg) translateY(0);
+  }
+}
+
+.drop-from-z {
+  animation-name: dropFromZ;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes dropFromZ {
+  0% {
+    scale: 100;
+  }
+  25% {
+    scale: 0.75;
+  }
+  50% {
+    scale: 1.01;
+  }
+}
+
+.rip-off {
+  position: relative;
+  overflow: hidden;
+}
+
+.rip-off::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-color: black;
+  animation-name: ripOff;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  background-color: black;
+}
+
+@keyframes ripOff {
+  0% {
+    background-color: black;
+  }
+  25% {
+    transform: translateX(0);
+    background-color: black;
+  }
+  50% {
+    transform: translateX(100%);
+    background-color: black;
+  }
+  51% {
+    transform: translateX(100%);
+    background-color: white;
+  }
+  100% {
+    transform: translateX(100%);
+    background-color: white;
+  }
+}

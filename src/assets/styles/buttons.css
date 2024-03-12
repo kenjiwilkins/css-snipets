@@ -15,6 +15,27 @@ button {
   font-weight: bold;
 }
 
+.blinking {
+  box-shadow: none;
+  border: 1px solid #f0f0f0;
+  animation-name: blink-button;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes blink-button {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .glowing {
   animation-name: glow;
   animation-duration: 1.5s;
